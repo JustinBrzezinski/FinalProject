@@ -29,8 +29,7 @@
 <br>
 
 3. **Any assets used that you didn't create yourself?** <br> (art, music, etc. Just tell us where you got it, link it here)
-
-Robot Crush font https://www.dafont.com/robot-crush.font
+https://assetstore.unity.com/packages/3d/props/industrial/industrial-props-kit-84745 
 
 <br>
 
