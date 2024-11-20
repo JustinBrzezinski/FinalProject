@@ -30757,6 +30757,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2793021386073713017, guid: 760b8b1adb7535149a6d221dcd9ae886, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.056000113
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793021386073713017, guid: 760b8b1adb7535149a6d221dcd9ae886, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.90400004
+      objectReference: {fileID: 0}
     - target: {fileID: 2801461765448459013, guid: 760b8b1adb7535149a6d221dcd9ae886, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -30965,7 +30973,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2963141867551503917, guid: 760b8b1adb7535149a6d221dcd9ae886, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1511479726}
+    - targetCorrespondingSourceObject: {fileID: 2817737966727601880, guid: 760b8b1adb7535149a6d221dcd9ae886, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5159781156953904886}
   m_SourcePrefab: {fileID: 100100000, guid: 760b8b1adb7535149a6d221dcd9ae886, type: 3}
+--- !u!1 &5159781156953904885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2817737966727601880, guid: 760b8b1adb7535149a6d221dcd9ae886, type: 3}
+  m_PrefabInstance: {fileID: 5159781156953904884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5159781156953904886
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159781156953904885}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50d8c979fbbe1964085a816e78050f90, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
