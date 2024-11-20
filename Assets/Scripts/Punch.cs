@@ -5,10 +5,10 @@ using UnityEngine;
 public class Punch : MonoBehaviour
 {
     public KeyCode hit;
-    public int punchSpeed;
+    private Animator anim;
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -16,11 +16,9 @@ public class Punch : MonoBehaviour
     {
         if(Input.GetKeyDown(hit))
         {
-            transform.position += Vector3.forward * punchSpeed;
-        }
-        else
-        {
-            
+            Debug.Log("Punch");
+            anim.SetTrigger("Input");
+            anim.SetTrigger("Input2");
         }
     }
 }

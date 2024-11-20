@@ -6,7 +6,7 @@ public class FirstPersonController : MonoBehaviour
 {
     public float moveSpeed  =   2.0f;
     public float jumpSpeed  =   2.0f;
-
+    public float DashDistance = 1.5f;
     private Rigidbody rb;
     public KeyCode up;
     public KeyCode down;
@@ -27,6 +27,7 @@ public class FirstPersonController : MonoBehaviour
         if(Input.GetKey(up))
         {
             transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0, 270, 0);
             if (Input.GetKey(left))
             {
                 transform.position += Vector3.left * moveSpeed * Time.deltaTime;
@@ -34,11 +35,16 @@ public class FirstPersonController : MonoBehaviour
             if (Input.GetKey(right))
             {
                 transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            }
+            if(Input.GetKeyDown(dash))
+            {
+                transform.position += Vector3.forward * DashDistance;
             }
         }
         else if(Input.GetKey (down))
         {
             transform.position += Vector3.back * moveSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0, 90, 0);
             if (Input.GetKey(left))
             {
                 transform.position += Vector3.left * moveSpeed * Time.deltaTime;
@@ -47,10 +53,15 @@ public class FirstPersonController : MonoBehaviour
             {
                 transform.position += Vector3.right * moveSpeed * Time.deltaTime;
             }
+            if (Input.GetKeyDown(dash))
+            {
+                transform.position += Vector3.back * DashDistance;
+            }
         }
         else if(Input.GetKey(left))
         {
             transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             if (Input.GetKey(up))
             {
                 transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
@@ -58,11 +69,16 @@ public class FirstPersonController : MonoBehaviour
             if (Input.GetKey(down))
             {
                 transform.position += Vector3.back * moveSpeed * Time.deltaTime;
+            }
+            if (Input.GetKeyDown(dash))
+            {
+                transform.position += Vector3.left * DashDistance;
             }
         }
         else if(Input.GetKey(right))
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             if (Input.GetKey(up))
             {
                 transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
@@ -70,6 +86,10 @@ public class FirstPersonController : MonoBehaviour
             if (Input.GetKey(down))
             {
                 transform.position += Vector3.back * moveSpeed * Time.deltaTime;
+            }
+            if (Input.GetKeyDown(dash))
+            {
+                transform.position += Vector3.right * DashDistance;
             }
         }
         if(Input.GetKeyDown(Jump) && IsGrounded)
@@ -79,18 +99,10 @@ public class FirstPersonController : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ground")
-        {
-            Debug.Log("Enter");
             IsGrounded = true;
-        }
     }
     void OnCollisionExit(Collision other)
     {
-        if (other.gameObject.tag == "Ground")
-        {
-            Debug.Log("Exit");
             IsGrounded = false;
-        }
     }
 }
