@@ -30,6 +30,10 @@
 
 3. **Any assets used that you didn't create yourself?** <br> (art, music, etc. Just tell us where you got it, link it here)
 https://assetstore.unity.com/packages/3d/props/industrial/industrial-props-kit-84745 
+https://assetstore.unity.com/packages/3d/props/traffic-control-pack1-4919
+https://assetstore.unity.com/packages/3d/props/industrial/modular-fences-pack-34359
+https://assetstore.unity.com/packages/3d/props/industrial/pbr-metal-barrels-pack-221309
+https://assetstore.unity.com/packages/3d/environments/dungeons/lite-dungeon-pack-low-poly-3d-art-by-gridness-242692
 
 <br>
 
