@@ -19,11 +19,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(p1health == 0)
+        if(p1health <= 0)
         {
             p1die = true;
         }
-        if(p2health == 0)
+        if(p2health <= 0)
         {
             p2die = true;
         }
