@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     static public bool p2die = false;
     static public float p1knockback;
     static public float p2knockback;
+    public int timer = 0;
+    public GameObject p1;
+    public GameObject p2;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,20 @@ public class GameManager : MonoBehaviour
         }
         p1knockback = (-1 * (p1health - 100)) / 3;
         p2knockback = (-1 * (p2health -100)) / 3;
+
+    }
+    private void FixedUpdate()
+    {
+        if (Invincibility.p1Immune == true || Invincibility.p2Immune == true)
+        {
+            timer++;
+            if (timer >= 360)
+            {
+                Invincibility.p1Immune = false;
+                Invincibility.p2Immune = false;
+                timer = 0;
+            }
+        }
     }
     public void startGame()
     {

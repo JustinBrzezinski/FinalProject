@@ -11,7 +11,7 @@ public class CraneMove : MonoBehaviour
     {
         timer = 0;
         rb = GetComponent<Rigidbody>();
-}
+    }
 
     // Update is called once per frame
     void Update()
