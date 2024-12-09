@@ -8,12 +8,10 @@ public class BombExplode : MonoBehaviour
     public static int time = 0;
     void Update()
     {
-        Debug.Log(time);
         time++;
         if (time >= 60)
         {
             explode = true;
-            Debug.Log("Boom");
         }
         if (time >= 100)
         {

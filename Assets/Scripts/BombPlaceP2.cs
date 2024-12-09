@@ -47,6 +47,7 @@ public class BombPlacep2 : MonoBehaviour
         {
             if (Input.GetKeyDown(place))
             {
+                BombExplode.explode = false;
                 BombExplode.time = 0;
                 Instantiate(bombs, spawnpoint, spawnDest1.rotation);
                 bombtotal++;

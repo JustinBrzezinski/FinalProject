@@ -21,7 +21,7 @@ public class PowerupSpawner : MonoBehaviour
         while (spawningbool == true)
         {
             yield return new WaitForSeconds(spawnTime);
-            randNum = Random.Range(1, 3);
+            randNum = Random.Range(1, 4);
             if (randNum == 1)
             {
                 Instantiate(IPower, spawnDest1.position, spawnDest1.rotation);

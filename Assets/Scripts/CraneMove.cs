@@ -17,7 +17,7 @@ public class CraneMove : MonoBehaviour
     void Update()
     {
         timer++;
-        if (timer > 3000)
+        if (timer > 1500)
         {
             transform.position += Vector3.left * craneSpeed * Time.deltaTime;
         }
