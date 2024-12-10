@@ -13,6 +13,9 @@ public class BombPlacep2 : MonoBehaviour
     public Vector3 spawnpoint;
     public int offsetz = 0;
     public int offsetx = 0;
+    public GameObject Iparts;
+    public GameObject dash;
+    public KeyCode speed;
     void Start()
     {
         bombtotal = 0;
@@ -22,25 +25,46 @@ public class BombPlacep2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 pos = transform.position;
+        if (Invincibility.p2Immune == true)
+        {
+            Instantiate(Iparts, pos, Quaternion.identity);
+        }
         if (transform.rotation == Quaternion.Euler(0, 270, 0))
         {
             offsetz = 5;
             offsetx = 0;
+            if (Input.GetKeyDown(speed))
+            {
+                Instantiate(dash, pos, Quaternion.Euler(0, 180, 0));
+            }
         }
         else if (transform.rotation == Quaternion.Euler(0, 90, 0))
         {
             offsetz = -5;
             offsetx = 0;
+            if (Input.GetKeyDown(speed))
+            {
+                Instantiate(dash, pos, Quaternion.Euler(0, 0, 0));
+            }
         }
         else if (transform.rotation == Quaternion.Euler(0, 180, 0))
         {
             offsetx = -5;
             offsetz = 0;
+            if (Input.GetKeyDown(speed))
+            {
+                Instantiate(dash, pos, Quaternion.Euler(0, 90, 0));
+            }
         }
         if (transform.rotation == Quaternion.Euler(0, 0, 0))
         {
             offsetx = 5;
             offsetz = 0;
+            if (Input.GetKeyDown(speed))
+            {
+                Instantiate(dash, pos, Quaternion.Euler(0, 270, 0));
+            }
         }
         spawnpoint = new Vector3(transform.position.x + offsetx, transform.position.y, transform.position.z + offsetz);
         if (BombPower.p2Bombs == true)

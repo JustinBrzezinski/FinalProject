@@ -8,7 +8,6 @@ public class p1death : MonoBehaviour
     {
         if (HurtPunch.p1hurt == true)
         {
-            Debug.Log(GameManager.p1health);
             if (transform.rotation == Quaternion.Euler(0, 270, 0))
             {
                 transform.position += Vector3.back * GameManager.p1knockback * Sawhurt.Sawknockback;

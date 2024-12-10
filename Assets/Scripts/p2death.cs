@@ -16,7 +16,6 @@ public class p2death : MonoBehaviour
     {
         if (HurtPunch.p2hurt == true)
         {
-            Debug.Log(GameManager.p2health);
             if(transform.rotation == Quaternion.Euler(0, 270, 0))
             {
                 transform.position += Vector3.back * GameManager.p2knockback * Sawhurt.Sawknockback;

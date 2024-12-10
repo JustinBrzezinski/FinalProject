@@ -16,7 +16,6 @@ public class Punch : MonoBehaviour
     {
         if(Input.GetKeyDown(hit))
         {
-            Debug.Log("Punch");
             anim.SetTrigger("Input");
             anim.SetTrigger("Input2");
         }

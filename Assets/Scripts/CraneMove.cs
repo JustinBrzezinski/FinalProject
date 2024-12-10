@@ -7,6 +7,7 @@ public class CraneMove : MonoBehaviour
     public int timer = 0;
     private Rigidbody rb;
     public int craneSpeed = 5;
+    public AudioClip Move;
     void Start()
     {
         timer = 0;
@@ -17,8 +18,10 @@ public class CraneMove : MonoBehaviour
     void Update()
     {
         timer++;
+        Vector3 pos = transform.position;
         if (timer > 1500)
         {
+            AudioSource.PlayClipAtPoint(Move, pos);
             transform.position += Vector3.left * craneSpeed * Time.deltaTime;
         }
         if (transform.position.x < -70)
